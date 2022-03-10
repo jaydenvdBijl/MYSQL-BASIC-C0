@@ -7,12 +7,12 @@ SELECT COUNT(year) FROM `videogamesales` WHERE year = 1999;
 SELECT SUM(NA_Sales) FROM `videogamesales` WHERE genre = "sports";
 24081
 -- Opdracht 4
-?
+SELECT name, platform, year naam_en_platform_van_alle_games_van_1990_tot_2005_van_Nintendo FROM videogamesales WHERE publisher = "Nintendo" AND year>= 1990 AND year<= 2005;
 -- Opdracht 5
-SELECT name, MAX(Global_Sales) hoogste_aantal_Global_sales FROM `videogamesales`
+SELECT name, MAX(Global_Sales) AS hoogste_aantal_Global_sales FROM `videogamesales`
 8274
 -- Opdracht 6 
-SELECT AVG(EU_Sales) gemiddelde_EU_sales_met_genre_Puzzle FROM `videogamesales` WHERE genre = "Puzzle";
+SELECT AVG(EU_Sales) AS gemiddelde_EU_sales_met_genre_Puzzle FROM `videogamesales` WHERE genre = "Puzzle";
 107.9565
 -- Opdracht 7 
 SELECT name, genre, publisher FROM `videogamesales` WHERE JP_Sales= 532;
@@ -35,4 +35,5 @@ DELETE FROM `videogamesales` WHERE publisher = "Nintendo" AND genre = "Adventure
 DELETE FROM `videogamesales` WHERE publisher = "Nintendo" AND Global_Sales < 1000;
 -- Opdracht 15
 DELETE FROM `videogamesales` WHERE year = 1997 AND NA_Sales > 200;
+
 
